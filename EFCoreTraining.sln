@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson1", "Lesson1\Lesson1.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ORM_SQL_İzolasyonu", "ORM_SQL_İzalasyonu\ORM_SQL_İzolasyonu.csproj", "{10BFC5B9-BA34-4810-B41A-C5A29BEC84AD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Code_First", "Code_First\Code_First.csproj", "{F2BACC71-430C-4460-A3BC-00EFEE390B01}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{10BFC5B9-BA34-4810-B41A-C5A29BEC84AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{10BFC5B9-BA34-4810-B41A-C5A29BEC84AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{10BFC5B9-BA34-4810-B41A-C5A29BEC84AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2BACC71-430C-4460-A3BC-00EFEE390B01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2BACC71-430C-4460-A3BC-00EFEE390B01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2BACC71-430C-4460-A3BC-00EFEE390B01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2BACC71-430C-4460-A3BC-00EFEE390B01}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
