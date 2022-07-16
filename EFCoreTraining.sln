@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ORM_SQL_İzolasyonu", "ORM_
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Code_First", "Code_First\Code_First.csproj", "{F2BACC71-430C-4460-A3BC-00EFEE390B01}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson9", "Lesson9\Lesson9.csproj", "{6C0750FB-B93D-454D-BB11-41D0A6745515}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson9", "Lesson9\Lesson9.csproj", "{6C0750FB-B93D-454D-BB11-41D0A6745515}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Persisting_The_Data", "Persisting_The_Data\Persisting_The_Data.csproj", "{F4E8F14F-41BC-449C-8EF0-6889C429C2BA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{6C0750FB-B93D-454D-BB11-41D0A6745515}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6C0750FB-B93D-454D-BB11-41D0A6745515}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6C0750FB-B93D-454D-BB11-41D0A6745515}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4E8F14F-41BC-449C-8EF0-6889C429C2BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4E8F14F-41BC-449C-8EF0-6889C429C2BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4E8F14F-41BC-449C-8EF0-6889C429C2BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4E8F14F-41BC-449C-8EF0-6889C429C2BA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
