@@ -146,60 +146,58 @@ ETicaretContext context = new();
 #endregion
 
 #region Tekil Veri Getiren Sorgulama Fonksiyonları
+//Yapılan sorguda sade ve sadece tek bir verinin gelmesi amaçlanıyorsa Single ya da SingleOrDefault fonksiyonları kullanılabilir.
 #region SingleAsync
+//Eğer ki, sorgu neticesinde birden fazla veri geliyorsa ya da hiç gelmiyorsa her iki durumda da exception fırlatır.
 #region Tek Kayıt Geldiğinde
-
+//var urun = await context.Urunler.SingleAsync(u => u.Id == 55);
 #endregion
 #region Hiç Kayıt Gelmediğinde
-
+//var urun = await context.Urunler.SingleAsync(u => u.Id == 5555);
 #endregion
 #region Çok Kayıt Geldiğinde
-
+//var urun = await context.Urunler.SingleAsync(u => u.Id > 55);
 #endregion
 #endregion
 
 #region SingleOrDefaultAsync
+//Eğer ki, sorgu neticesinde birden fazla veri geliyorsa exception fırlatır, hiç veri gelmiyorsa null döner.
 #region Tek Kayıt Geldiğinde
-
+//var urun = await context.Urunler.SingleOrDefaultAsync(u => u.Id == 55);
 #endregion
 #region Hiç Kayıt Gelmediğinde
-
+//var urun = await context.Urunler.SingleOrDefaultAsync(u => u.Id == 5555);
 #endregion
 #region Çok Kayıt Geldiğinde
-
+//var urun = await context.Urunler.SingleOrDefaultAsync(u => u.Id > 55);
 #endregion
 #endregion
 
+//Yapılan sorguda tek bir verinin gelmesi amaçlanıyorsa First ya da FirstOrDefault fonksiyonları kullanılabilir.
 #region FirstAsync
+//Sorgu neticesinde elde edilen verilerden ilkini getirir. Eğer ki hiç veri gelmiyorsa hata fırlatır.
 #region Tek Kayıt Geldiğinde
-
+//var urun = await context.Urunler.FirstAsync(u => u.Id == 55);
 #endregion
 #region Hiç Kayıt Gelmediğinde
-
+//var urun = await context.Urunler.FirstAsync(u => u.Id == 5555);
 #endregion
 #region Çok Kayıt Geldiğinde
-
+//var urun = await context.Urunler.FirstAsync(u => u.Id > 55);
 #endregion
 #endregion
 
 #region FirstOrDefaultAsync
+//Sorgu neticesinde elde edilen verilerden ilkini getirir. Eğer ki hiç veri gelmiyorsa null değerini döndürür.
 #region Tek Kayıt Geldiğinde
-
+//var urun = await context.Urunler.FirstOrDefaultAsync(u => u.Id == 55);
 #endregion
 #region Hiç Kayıt Gelmediğinde
-
+//var urun = await context.Urunler.FirstOrDefaultAsync(u => u.Id == 5555);
 #endregion
 #region Çok Kayıt Geldiğinde
-
+//var urun = await context.Urunler.FirstAsync(u => u.Id > 55);
 #endregion
-#endregion
-
-#region LastAsync
-
-#endregion
-
-#region LastOrDefaultAsync
-
 #endregion
 
 #region SingleAsync, SingleOrDefaultAsync, FirstAsync, FirstOrDefaultAsync Karşılaştırması
@@ -207,13 +205,27 @@ ETicaretContext context = new();
 #endregion
 
 #region FindAsync
-#region Composite Primary key Durumu
+//Find fonksiyonu, primary key kolonuna özel hızlı bir şekilde sorgulama yapmamızı sağlayan bir fonksiyondur.
+//Urun urun = await context.Urunler.FirstOrDefaultAsync(u => u.Id == 55);
+//Urun urun = await context.Urunler.FindAsync(55);
 
+#region Composite Primary key Durumu
+//UrunParca u = await context.UrunParca.FindAsync(2, 5);
 #endregion
 #endregion
 
 #region FindAsync İle SingleAsync, SingleOrDefaultAsync, FirstAsync, FirstOrDefaultAsync Fonksiyonlarının Karşılaştırması
 
+#endregion
+
+#region LastAsync
+//Sorgu neticesinde gelen verilerden en sonuncusunu getirir. Eğer ki hiç veri gelmiyorsa hata fırlatır. OrderBy kullanılması mecburidir.
+//var urun = await context.Urunler.OrderBy(u => u.Fiyat).LastAsync(u => u.Id > 55);
+#endregion
+
+#region LastOrDefaultAsync
+//Sorgu neticesinde gelen verilerden en sonuncusunu getirir. Eğer ki hiç veri gelmiyorsa null döner. OrderBy kullanılması mecburidir.
+var urun = await context.Urunler.OrderBy(u => u.Fiyat).LastOrDefaultAsync(u => u.Id > 55);
 #endregion
 #endregion
 
@@ -285,14 +297,22 @@ ETicaretContext context = new();
 
 #endregion
 
+Console.WriteLine();
+
 public class ETicaretContext : DbContext
 {
     public DbSet<Urun> Urunler { get; set; }
     public DbSet<Parca> Parcalar { get; set; }
+    public DbSet<UrunParca> UrunParca { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         optionsBuilder.UseSqlServer("Server=localhost, 1433;Database=ETicaretDB;User ID=SA;Password=1q2w3e4r+!");
+    }
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.Entity<UrunParca>().HasKey(up => new { up.UrunId, up.ParcaId });
     }
 }
 public class Urun
@@ -307,4 +327,12 @@ public class Parca
 {
     public int Id { get; set; }
     public string ParcaAdi { get; set; }
+}
+public class UrunParca
+{
+    public int UrunId { get; set; }
+    public int ParcaId { get; set; }
+
+    public Urun Urun { get; set; }
+    public Parca Parca { get; set; }
 }
