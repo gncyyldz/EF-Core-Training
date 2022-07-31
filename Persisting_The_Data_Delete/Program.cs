@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-
+Console.WriteLine();
 
 #region Veri Nasıl Silinir?
 //ETicaretContext context = new();
