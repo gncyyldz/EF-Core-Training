@@ -278,7 +278,7 @@ ETicaretContext context = new();
 //var aritmatikOrtalama = await context.Urunler.AverageAsync(u => u.Fiyat);
 #endregion
 
-#region ContainsAsync
+#region Contains
 //Like '%...%' sorgusu oluşturmamızı sağlar.
 //var urunler = await context.Urunler.Where(u => u.UrunAdi.Contains("7")).ToListAsync();
 #endregion
@@ -295,23 +295,62 @@ ETicaretContext context = new();
 #endregion
 
 #region Sorgu Sonucu Dönüşüm Fonksiyonları
-#region ToDictionaryAsync
+//Bu fonksiyonlar ile sorgu neticesinde elde edilen verileri isteğimiz doğrultuusnda farklı türlerde projecsiyon edebiliyoruz.
 
+#region ToDictionaryAsync
+//Sorgu neticesinde gelecek olan veriyi bir dictioanry olarak elde etmek/tutmak/karşılamak istiyorsak eğer kullanılır!
+//var urunler = await context.Urunler.ToDictionaryAsync(u => u.UrunAdi, u => u.Fiyat);
+
+//ToList ile aynı amaca hizmet etmektedir. Yani, oluşturulan sorguyu execute edip neticesini alırlar.
+//ToList : Gelen sorgu neticesini entity türünde bir koleksiyona(List<TEntity>) dönüştürmekteyken,
+//ToDictionary ise : Gelen sorgu neticesini Dictionary türünden bir koleksiyona dönüştürecektir.
 #endregion
 
 #region ToArrayAsync
-
+//Oluşturulan sorguyu dizi olarak elde eder.
+//ToList ile muadil amaca hizmet eder. Yani sorguyu execute eder lakin gelen sonucu entity dizisi  olarak elde eder.
+//var urunler = await context.Urunler.ToArrayAsync();
 #endregion
 
 #region Select
+//Select fonksiyonunun işlevsel olarak birden fazla davranışı söz konusudur,
+//1. Select fonksiyonu, generate edilecek sorgunun çekilecek kolonlarını ayarlamamızı sağlamaktadır. 
+
+//var urunler = await context.Urunler.Select(u => new Urun
+//{
+//    Id = u.Id,
+//    Fiyat = u.Fiyat
+//}).ToListAsync();
+
+//2. Select fonksiyonu, gelen verileri farklı türlerde karşılamamızı sağlar. T, anonim
+
+//var urunler = await context.Urunler.Select(u => new 
+//{
+//    Id = u.Id,
+//    Fiyat = u.Fiyat
+//}).ToListAsync();
+
+
+//var urunler = await context.Urunler.Select(u => new UrunDetay
+//{
+//    Id = u.Id,
+//    Fiyat = u.Fiyat
+//}).ToListAsync();
 
 #endregion
 
 #region SelectMany
+//Select ile aynı amaca hizmet eder. Lakin, ilişkisel tablolar neticesinde gelen koleksiyonel verileri de tekilleştirip projeksiyon etmemizi sağlar.
 
+//var urunler = await context.Urunler.Include(u => u.Parcalar).SelectMany(u => u.Parcalar, (u, p) => new
+//{
+//    u.Id,
+//    u.Fiyat,
+//    p.ParcaAdi
+//}).ToListAsync();
 #endregion
 #endregion
-
+Console.WriteLine();
 #region GroupBy Fonksiyonu
 
 #endregion
@@ -357,4 +396,10 @@ public class UrunParca
 
     public Urun Urun { get; set; }
     public Parca Parca { get; set; }
+}
+
+public class UrunDetay
+{
+    public int Id { get; set; }
+    public float Fiyat { get; set; }
 }
