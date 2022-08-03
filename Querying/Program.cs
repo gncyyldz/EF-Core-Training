@@ -350,13 +350,40 @@ ETicaretContext context = new();
 //}).ToListAsync();
 #endregion
 #endregion
-Console.WriteLine();
-#region GroupBy Fonksiyonu
 
+#region GroupBy Fonksiyonu
+//Gruplama yapmamızı sağlayan fonksiyondur.
+#region Method Syntax
+//var datas = await context.Urunler.GroupBy(u => u.Fiyat).Select(group => new
+//{
+//    Count = group.Count(),
+//    Fiyat = group.Key
+//}).ToListAsync();
+#endregion
+#region Query Syntax
+var datas = await (from urun in context.Urunler
+                   group urun by urun.Fiyat
+            into @group
+                   select new
+                   {
+                       Fiyat = @group.Key,
+                       Count = @group.Count()
+                   }).ToListAsync();
+#endregion
 #endregion
 
 #region Foreach Fonksiyonu
+//Bir sorgulama fonksiyonu felan değildir!
+//Sorgulama neticesinde elde edilen koleksiyonel veriler üzerinde iterasyonel olarak dönmemizi ve teker teker verileri elde edip işlemler yapabilmemizi sağlayan bir fonksiyondur. foreach döngüsünün metot halidir!
 
+foreach (var item in datas)
+{
+
+}
+datas.ForEach(x =>
+{
+    
+});
 #endregion
 
 
