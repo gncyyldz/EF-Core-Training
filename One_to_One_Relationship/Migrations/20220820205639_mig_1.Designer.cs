@@ -2,16 +2,18 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace Relationships.Migrations
+namespace One_to_One_Relationship.Migrations
 {
-    [DbContext(typeof(ETicaretContext))]
-    partial class ETicaretContextModelSnapshot : ModelSnapshot
+    [DbContext(typeof(ESirketDbContext))]
+    [Migration("20220820205639_mig_1")]
+    partial class mig_1
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -37,7 +39,7 @@ namespace Relationships.Migrations
                     b.ToTable("Calisanlar");
                 });
 
-            modelBuilder.Entity("CalisanAdres", b =>
+            modelBuilder.Entity("CalisanAdresi", b =>
                 {
                     b.Property<int>("Id")
                         .HasColumnType("int");
@@ -48,14 +50,14 @@ namespace Relationships.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("CalisanAdresler");
+                    b.ToTable("CalisanAdresleri");
                 });
 
-            modelBuilder.Entity("CalisanAdres", b =>
+            modelBuilder.Entity("CalisanAdresi", b =>
                 {
                     b.HasOne("Calisan", "Calisan")
-                        .WithOne("CalisanAdres")
-                        .HasForeignKey("CalisanAdres", "Id")
+                        .WithOne("CalisanAdresi")
+                        .HasForeignKey("CalisanAdresi", "Id")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -64,7 +66,7 @@ namespace Relationships.Migrations
 
             modelBuilder.Entity("Calisan", b =>
                 {
-                    b.Navigation("CalisanAdres")
+                    b.Navigation("CalisanAdresi")
                         .IsRequired();
                 });
 #pragma warning restore 612, 618

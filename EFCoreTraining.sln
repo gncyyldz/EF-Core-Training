@@ -21,9 +21,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Querying", "Querying\Queryi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChangeTracker", "ChangeTracker\ChangeTracker.csproj", "{C7529879-A0D7-4CBA-A48B-6A14A2D33E53}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tracking", "Tracking\Tracking.csproj", "{4057F9ED-6849-4CBE-893C-E7CC31FBD96B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tracking", "Tracking\Tracking.csproj", "{4057F9ED-6849-4CBE-893C-E7CC31FBD96B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Relationships", "Relationships\Relationships.csproj", "{BC892FD9-7C89-43FA-9931-BE5CF2D9CA84}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Relationships", "Relationships\Relationships.csproj", "{BC892FD9-7C89-43FA-9931-BE5CF2D9CA84}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "One_to_One_Relationship", "One_to_One_Relationship\One_to_One_Relationship.csproj", "{BFB1EAEA-7E53-44E9-9EE9-0D1B2BDBAAC8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +77,10 @@ Global
 		{BC892FD9-7C89-43FA-9931-BE5CF2D9CA84}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BC892FD9-7C89-43FA-9931-BE5CF2D9CA84}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BC892FD9-7C89-43FA-9931-BE5CF2D9CA84}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFB1EAEA-7E53-44E9-9EE9-0D1B2BDBAAC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFB1EAEA-7E53-44E9-9EE9-0D1B2BDBAAC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFB1EAEA-7E53-44E9-9EE9-0D1B2BDBAAC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFB1EAEA-7E53-44E9-9EE9-0D1B2BDBAAC8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

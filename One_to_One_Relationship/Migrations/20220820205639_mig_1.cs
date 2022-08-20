@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace Relationships.Migrations
+namespace One_to_One_Relationship.Migrations
 {
     public partial class mig_1 : Migration
     {
@@ -22,7 +22,7 @@ namespace Relationships.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "CalisanAdresler",
+                name: "CalisanAdresleri",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false),
@@ -30,9 +30,9 @@ namespace Relationships.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_CalisanAdresler", x => x.Id);
+                    table.PrimaryKey("PK_CalisanAdresleri", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_CalisanAdresler_Calisanlar_Id",
+                        name: "FK_CalisanAdresleri_Calisanlar_Id",
                         column: x => x.Id,
                         principalTable: "Calisanlar",
                         principalColumn: "Id",
@@ -43,7 +43,7 @@ namespace Relationships.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "CalisanAdresler");
+                name: "CalisanAdresleri");
 
             migrationBuilder.DropTable(
                 name: "Calisanlar");

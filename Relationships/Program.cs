@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-
+Console.WriteLine();
 
 #region Relationships(İlişkiler) Terimleri
 #region Principal Entity(Asıl Entity)
