@@ -25,7 +25,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tracking", "Tracking\Tracki
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Relationships", "Relationships\Relationships.csproj", "{BC892FD9-7C89-43FA-9931-BE5CF2D9CA84}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "One_to_One_Relationship", "One_to_One_Relationship\One_to_One_Relationship.csproj", "{BFB1EAEA-7E53-44E9-9EE9-0D1B2BDBAAC8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "One_to_One_Relationship", "One_to_One_Relationship\One_to_One_Relationship.csproj", "{BFB1EAEA-7E53-44E9-9EE9-0D1B2BDBAAC8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "One_to_Many_Relationship", "One_to_Many_Relationship\One_to_Many_Relationship.csproj", "{AF8C10FA-44F8-434D-877F-BD6CE5C2307B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +83,10 @@ Global
 		{BFB1EAEA-7E53-44E9-9EE9-0D1B2BDBAAC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BFB1EAEA-7E53-44E9-9EE9-0D1B2BDBAAC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BFB1EAEA-7E53-44E9-9EE9-0D1B2BDBAAC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF8C10FA-44F8-434D-877F-BD6CE5C2307B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF8C10FA-44F8-434D-877F-BD6CE5C2307B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF8C10FA-44F8-434D-877F-BD6CE5C2307B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF8C10FA-44F8-434D-877F-BD6CE5C2307B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
