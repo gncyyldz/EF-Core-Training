@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
+Console.Read();
 //ApplicationDbContext context = new();
 
 #region One to One İlişkisel Senaryolarda Veri Ekleme
