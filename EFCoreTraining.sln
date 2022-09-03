@@ -33,7 +33,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Many_to_Many_Relationship",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Saving_Related_Data", "Saving_Related_Data\Saving_Related_Data.csproj", "{1443DCFD-1DDA-4CCC-8CF3-EC30D7477E10}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Updating_Related_Data", "Updating_Related_Data\Updating_Related_Data.csproj", "{DDA8A52A-54CB-41F5-89FE-ED7EB96EA240}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Updating_Related_Data", "Updating_Related_Data\Updating_Related_Data.csproj", "{DDA8A52A-54CB-41F5-89FE-ED7EB96EA240}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Deleting_Related_Data", "Deleting_Related_Data\Deleting_Related_Data.csproj", "{47A9F2AF-63CD-4EB4-AB76-41ABF880DAA7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -105,6 +107,10 @@ Global
 		{DDA8A52A-54CB-41F5-89FE-ED7EB96EA240}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DDA8A52A-54CB-41F5-89FE-ED7EB96EA240}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DDA8A52A-54CB-41F5-89FE-ED7EB96EA240}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47A9F2AF-63CD-4EB4-AB76-41ABF880DAA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47A9F2AF-63CD-4EB4-AB76-41ABF880DAA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47A9F2AF-63CD-4EB4-AB76-41ABF880DAA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47A9F2AF-63CD-4EB4-AB76-41ABF880DAA7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
