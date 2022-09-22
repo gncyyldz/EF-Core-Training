@@ -92,59 +92,64 @@ ApplicationDbContext context = new();
 #region Configurations | Fluent API
 
 #region Composite Key
-
+//Tablolarda birden fazla kolonu kümülatif olarak primary key yapmak istiyorsak buna composite key denir.
 #endregion
 
 #region HasDefaultSchema
-
+//EF Core üzerinden inşa edilen herhangi bir veritabanı nesnesi default olarak dbo şemasına sahiptir. Bunu özelleştirebilmek için kullanılan bir yapılandırmadır.
 #endregion
 
 #region Property
 
 #region HasDefaultValue
-
+//Tablodaki herhangi bir kolonun değer gönderilmediği durumlarda default olarak hangi değeri alacağını belirler.
 #endregion
 
 #region HasDefaultValueSql
-
+//Tablodaki herhangi bir kolonun değer gönderilmediği durumlarda default olarak hangi sql cümleciğinden değeri alacağını belirler.
 #endregion
 
 #endregion
 
 #region HasComputedColumnSql
-
+//Tablolarda birden fazla kolondaki veirleri işleyerek değerini oluşturan kolonlara Computed Column denmektedir. EF Core üzerinden bu tarz computed column oluşturabilmek için kullanıolan bir yapılandırmadır.
 #endregion
 
 #region HasConstraintName
-
+//EF Core üzerinden oluşturulkan constraint'lere default isim yerine özelleştirilmiş bir isim verebilmek için kullanılan yapılandırmadır.
 #endregion
 
 #region HasData
-
+//Sonraki derslerimizde Seed Data isimli bir konuyu incleyeceğiz. Bu konuda migrate sürecinde veritabanını inşa ederken bir yandan da yazılım üzerinden hazır veriler oluşturmak istiyorsak eğer buunun yöntemini usulünü inceliyor olacağız.
+//İşte HasData konfigürasyonu bu operasyonun yapılandırma ayağıdır.
+//HasData ile migrate sürecinde oluşturulacak olan verilerin pk olan id kolonlarına iradeli bir şekilde değerlerin girilmesi zorunludur!
 #endregion
 
 #region HasDiscriminator
+//İleride entityler arasında kalıtımsal ilişkilerin olduğu TPT ve TPH isminde konuları inceliyor olacağız. İşte bu konularla ilgili yapılandırmalarımız HasDiscriminator ve HasValue fonksiyonlarıdır.
+
+#region HasValue
+
+#endregion
 
 #endregion
 
 #region HasField
-
+//Backing Field özelliğini kullanmamızı sağlayan bir yapılandırmadır.
 #endregion
 
 #region HasNoKey
-
+//Normal şartlarda EF Core'da tüm entitylerin bir PK kolonu olmak zorundadır. Eğer ki entity'de pk kolonu olmayacaksa bunun bildirilmesi gerekmektedir! İşte bunun için kullanuılan fonksiyondur.
 #endregion
 
 #region HasIndex
-
+//Sonraki derslerimizde EF Core üzerinden Index yapılanmasını detaylıca inceliyor olacağız.
+//Bu ypılanmaya dair konfigürasyonlarımız HasIndex ve Index attribute'dur.
 #endregion
 
 #region HasQueryFilter
-
-#endregion
-
-#region HasValue
-
+//İleride göreceğimiz Global QUery Filter başlıklı dersimizin yapılandırmasıdır.
+//Temeldeki görevi bir entitye karşılık uygulama bazında global bir filtre koymaktır.
 #endregion
 
 #region DatabaseGenerated - ValueGeneratedOnAddOrUpdate, ValueGeneratedOnAdd, ValueGeneratedNever
@@ -153,15 +158,19 @@ ApplicationDbContext context = new();
 #endregion
 
 
+
 //[Table("Kisiler")]
 class Person
 {
     //[Key]
     public int Id { get; set; }
+    //public int Id2 { get; set; }
     //[ForeignKey(nameof(Department))]
-    public int DId { get; set; }
+    //public int DId { get; set; }
     //[Column("Adi", TypeName = "metin", Order = 7)]
-    public string Name { get; set; }
+    public int DepartmentId { get; set; }
+    public string _name;
+    public string Name { get => _name; set => _name = value; }
     //[Required()]
     //[MaxLength(13)]
     //[StringLength(14)]
@@ -190,12 +199,37 @@ class Department
 
     public ICollection<Person> Persons { get; set; }
 }
+class Example
+{
+
+    public int X { get; set; }
+    public int Y { get; set; }
+    public int Computed { get; set; }
+}
+class Entity
+{
+    public int Id { get; set; }
+    public string X { get; set; }
+}
+class A : Entity
+{
+    public int Y { get; set; }
+}
+class B : Entity
+{
+    public int Z { get; set; }
+}
 class ApplicationDbContext : DbContext
 {
-    //public DbSet<Person> Persons { get; set; }
-    //public DbSet<Department> Departments { get; set; }
-    public DbSet<Flight> Flights { get; set; }
-    public DbSet<Airport> Airports { get; set; }
+    //public DbSet<Entity> Entities { get; set; }
+    //public DbSet<A> As { get; set; }
+    //public DbSet<B> Bs { get; set; }
+
+    public DbSet<Person> Persons { get; set; }
+    public DbSet<Department> Departments { get; set; }
+    //public DbSet<Flight> Flights { get; set; }
+    //public DbSet<Airport> Airports { get; set; }
+    public DbSet<Example> Examples { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -264,6 +298,90 @@ class ApplicationDbContext : DbContext
         //modelBuilder.Entity<Person>()
         //    .Property(p => p.ConcurrencyCheck)
         //    .IsConcurrencyToken();
+        #endregion
+        #region CompositeKey
+        //modelBuilder.Entity<Person>().HasKey("Id", "Id2");
+        //modelBuilder.Entity<Person>().HasKey(p => new { p.Id, p.Id2 });
+        #endregion
+        #region HasDefaultSchema
+        //modelBuilder.HasDefaultSchema("ahmet");
+        #endregion
+        #region Property
+        #region HasDefaultValue
+        //modelBuilder.Entity<Person>()
+        // .Property(p => p.Salary)
+        // .HasDefaultValue(100);
+        #endregion
+        #region HasDefaultValueSql
+        //modelBuilder.Entity<Person>()
+        //    .Property(p => p.CreatedDate)
+        //    .HasDefaultValueSql("GETDATE()");
+        #endregion
+        #endregion
+        #region HasComputedColumnSql
+        //modelBuilder.Entity<Example>()
+        //    .Property(p => p.Computed)
+        //    .HasComputedColumnSql("[X] + [Y]");
+        #endregion
+        #region HasConstraintName
+        //modelBuilder.Entity<Person>()
+        //    .HasOne(p => p.Department)
+        //    .WithMany(d => d.Persons)
+        //    .HasForeignKey(p => p.DepartmentId)
+        //    .HasConstraintName("ahmet");
+        #endregion
+        #region HasData
+        //modelBuilder.Entity<Department>().HasData(
+        //    new Department()
+        //    {
+        //        Name = "asd",
+        //        Id = 1
+        //    });
+        //modelBuilder.Entity<Person>().HasData(
+        //    new Person
+        //    {
+        //        Id = 1,
+        //        DepartmentId = 1,
+        //        Name = "ahmet",
+        //        Surname = "filanca",
+        //        Salary = 100,
+        //        CreatedDate = DateTime.Now
+        //    },
+        //    new Person
+        //    {
+        //        Id = 2,
+        //        DepartmentId = 1,
+        //        Name = "mehmet",
+        //        Surname = "filanca",
+        //        Salary = 200,
+        //        CreatedDate = DateTime.Now
+        //    }
+        //    );
+        #endregion
+        #region HasDiscriminator
+        //modelBuilder.Entity<Entity>()
+        //    .HasDiscriminator<int>("Ayirici")
+        //    .HasValue<A>(1)
+        //    .HasValue<B>(2)
+        //    .HasValue<Entity>(3);
+
+        #endregion
+        #region HasField
+        //modelBuilder.Entity<Person>()
+        //    .Property(p => p.Name)
+        //    .HasField(nameof(Person._name));
+        #endregion
+        #region HasNoKey
+        //modelBuilder.Entity<Example>()
+        //    .HasNoKey();
+        #endregion
+        #region HasIndex
+        //modelBuilder.Entity<Person>()
+        //    .HasIndex(p => new { p.Name, p.Surname });
+        #endregion
+        #region HasQueryFilter
+        //modelBuilder.Entity<Person>()
+        //    .HasQueryFilter(p => p.CreatedDate.Year == DateTime.Now.Year);
         #endregion
     }
 
