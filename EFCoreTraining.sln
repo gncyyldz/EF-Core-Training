@@ -49,7 +49,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data_Seeding", "Data_Seedin
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Inheritance_Table_Per_Hierarchy", "Inheritance_Table_Per_Hierarchy\Inheritance_Table_Per_Hierarchy.csproj", "{91E8F932-59B4-494B-9313-2EF2A436AEE5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inheritance_Table_Per_Type", "Inheritance_Table_Per_Type\Inheritance_Table_Per_Type.csproj", "{522A7129-4B9F-43C5-8134-0CFD9BC0C277}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Inheritance_Table_Per_Type", "Inheritance_Table_Per_Type\Inheritance_Table_Per_Type.csproj", "{522A7129-4B9F-43C5-8134-0CFD9BC0C277}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inheritance_Table_Per_Concrete_Type", "Inheritance_Table_Per_Concrete_Type\Inheritance_Table_Per_Concrete_Type.csproj", "{246EC9B9-AF23-4572-8235-4A184C883883}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -153,6 +155,10 @@ Global
 		{522A7129-4B9F-43C5-8134-0CFD9BC0C277}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{522A7129-4B9F-43C5-8134-0CFD9BC0C277}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{522A7129-4B9F-43C5-8134-0CFD9BC0C277}.Release|Any CPU.Build.0 = Release|Any CPU
+		{246EC9B9-AF23-4572-8235-4A184C883883}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{246EC9B9-AF23-4572-8235-4A184C883883}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{246EC9B9-AF23-4572-8235-4A184C883883}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{246EC9B9-AF23-4572-8235-4A184C883883}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
