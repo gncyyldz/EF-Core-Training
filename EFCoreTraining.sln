@@ -57,6 +57,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Constraints", "Constraints\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Indexes", "Indexes\Indexes.csproj", "{4E8180D9-4220-412D-A0EF-E2DBEED074FC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sequences", "Sequences\Sequences.csproj", "{F9B06906-78E4-4727-8A9D-3A8BEC014865}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -171,6 +173,10 @@ Global
 		{4E8180D9-4220-412D-A0EF-E2DBEED074FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4E8180D9-4220-412D-A0EF-E2DBEED074FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4E8180D9-4220-412D-A0EF-E2DBEED074FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9B06906-78E4-4727-8A9D-3A8BEC014865}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9B06906-78E4-4727-8A9D-3A8BEC014865}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9B06906-78E4-4727-8A9D-3A8BEC014865}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9B06906-78E4-4727-8A9D-3A8BEC014865}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
