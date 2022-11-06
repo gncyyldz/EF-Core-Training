@@ -61,7 +61,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sequences", "Sequences\Sequ
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Loading_Related_Data", "Loading_Related_Data\Loading_Related_Data.csproj", "{791CDADB-9FBC-4125-ADCF-390AF7703EA0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Explicit_Loading", "Explicit_Loading\Explicit_Loading.csproj", "{E6596F06-BD43-4F1E-978E-EE45876D6B31}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Explicit_Loading", "Explicit_Loading\Explicit_Loading.csproj", "{E6596F06-BD43-4F1E-978E-EE45876D6B31}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lazy_Loading", "Lazy_Loading\Lazy_Loading.csproj", "{445EDF84-2824-48A9-9545-E001E286B56B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -189,6 +191,10 @@ Global
 		{E6596F06-BD43-4F1E-978E-EE45876D6B31}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E6596F06-BD43-4F1E-978E-EE45876D6B31}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E6596F06-BD43-4F1E-978E-EE45876D6B31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{445EDF84-2824-48A9-9545-E001E286B56B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{445EDF84-2824-48A9-9545-E001E286B56B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{445EDF84-2824-48A9-9545-E001E286B56B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{445EDF84-2824-48A9-9545-E001E286B56B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
