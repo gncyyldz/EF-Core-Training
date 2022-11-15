@@ -67,7 +67,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lazy_Loading", "Lazy_Loadin
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Complex_Relational_Queries", "Complex_Relational_Queries\Complex_Relational_Queries.csproj", "{9010E71E-A15E-41E3-BCC0-F53A594EC403}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sql_Queries", "Sql_Queries\Sql_Queries.csproj", "{591A2CD7-2638-422B-AE38-B23854C1B701}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sql_Queries", "Sql_Queries\Sql_Queries.csproj", "{591A2CD7-2638-422B-AE38-B23854C1B701}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Views", "Views\Views.csproj", "{64753825-47B9-4760-B033-3A450026B8DF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -207,6 +209,10 @@ Global
 		{591A2CD7-2638-422B-AE38-B23854C1B701}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{591A2CD7-2638-422B-AE38-B23854C1B701}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{591A2CD7-2638-422B-AE38-B23854C1B701}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64753825-47B9-4760-B033-3A450026B8DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64753825-47B9-4760-B033-3A450026B8DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64753825-47B9-4760-B033-3A450026B8DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64753825-47B9-4760-B033-3A450026B8DF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
