@@ -71,6 +71,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sql_Queries", "Sql_Queries\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Views", "Views\Views.csproj", "{64753825-47B9-4760-B033-3A450026B8DF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stored_Procedures", "Stored_Procedures\Stored_Procedures.csproj", "{C2748403-BA5D-415D-B124-6D7D20EC36D9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -213,6 +215,10 @@ Global
 		{64753825-47B9-4760-B033-3A450026B8DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{64753825-47B9-4760-B033-3A450026B8DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{64753825-47B9-4760-B033-3A450026B8DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2748403-BA5D-415D-B124-6D7D20EC36D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2748403-BA5D-415D-B124-6D7D20EC36D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2748403-BA5D-415D-B124-6D7D20EC36D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2748403-BA5D-415D-B124-6D7D20EC36D9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
