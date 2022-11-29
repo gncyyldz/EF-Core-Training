@@ -73,7 +73,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Views", "Views\Views.csproj
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Stored_Procedures", "Stored_Procedures\Stored_Procedures.csproj", "{C2748403-BA5D-415D-B124-6D7D20EC36D9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Functions", "Functions\Functions.csproj", "{47F56902-878B-45DF-BDB6-926FDEAB332A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Functions", "Functions\Functions.csproj", "{47F56902-878B-45DF-BDB6-926FDEAB332A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EfCoreAdoNet", "EfCoreAdoNet\EfCoreAdoNet.csproj", "{D2B2DE13-E611-451D-A6DA-4EC75095F2B3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -225,6 +227,10 @@ Global
 		{47F56902-878B-45DF-BDB6-926FDEAB332A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{47F56902-878B-45DF-BDB6-926FDEAB332A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{47F56902-878B-45DF-BDB6-926FDEAB332A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2B2DE13-E611-451D-A6DA-4EC75095F2B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2B2DE13-E611-451D-A6DA-4EC75095F2B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2B2DE13-E611-451D-A6DA-4EC75095F2B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2B2DE13-E611-451D-A6DA-4EC75095F2B3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
