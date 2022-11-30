@@ -25,9 +25,12 @@ ApplicationDbContext context = new();
 #endregion
 #endregion
 #region Keyless Entity Types Özellikleri Nelerdir?
-
+//Primary Key kolonu OLMAZ!
+//Change Tracker mekanizması aktif olmayacaktır.
+//TPH olarak entity hiyerarşisinde kullanılabilir lakin diğer kalıtımsal ilişkilerde kullanılamaz!
 #endregion
 
+[Keyless]
 public class PersonOrderCount
 {
     public string Name { get; set; }
