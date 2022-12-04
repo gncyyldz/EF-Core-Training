@@ -79,7 +79,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EfCoreAdoNet", "EfCoreAdoNe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Keyless_Entity_Types", "Keyless_Entity_Types\Keyless_Entity_Types.csproj", "{6150CCD8-B2E9-4155-9018-5F2731CB4D6D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EF_Core_Logging", "EF_Core_Logging\EF_Core_Logging.csproj", "{D4D12163-4D7F-4C32-83FA-4E640D4A75EB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EF_Core_Logging", "EF_Core_Logging\EF_Core_Logging.csproj", "{D4D12163-4D7F-4C32-83FA-4E640D4A75EB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Query_Log", "Query_Log\Query_Log.csproj", "{5592DBF4-8B70-4E35-B82F-F8FA48CF6A28}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -243,6 +245,10 @@ Global
 		{D4D12163-4D7F-4C32-83FA-4E640D4A75EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D4D12163-4D7F-4C32-83FA-4E640D4A75EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D4D12163-4D7F-4C32-83FA-4E640D4A75EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5592DBF4-8B70-4E35-B82F-F8FA48CF6A28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5592DBF4-8B70-4E35-B82F-F8FA48CF6A28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5592DBF4-8B70-4E35-B82F-F8FA48CF6A28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5592DBF4-8B70-4E35-B82F-F8FA48CF6A28}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
