@@ -87,9 +87,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Query_Tags", "Query_Tag\Que
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Connection_Resiliency", "Connection_Resiliency\Connection_Resiliency.csproj", "{92737A01-84E0-45E5-9F20-897B8A7E9443}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Global_Query_Filters", "Global_Query_Filters\Global_Query_Filters.csproj", "{E1744C02-79D6-41CA-B45C-C04169856478}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Global_Query_Filters", "Global_Query_Filters\Global_Query_Filters.csproj", "{E1744C02-79D6-41CA-B45C-C04169856478}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Owned_Entities_and_Table_Splitting", "Owned_Entities_and_Table_Splitting\Owned_Entities_and_Table_Splitting.csproj", "{B3FA884F-A86E-43ED-9CBF-7D1851B02A53}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Owned_Entities_and_Table_Splitting", "Owned_Entities_and_Table_Splitting\Owned_Entities_and_Table_Splitting.csproj", "{B3FA884F-A86E-43ED-9CBF-7D1851B02A53}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Temporal_Tables", "Temporal_Tables\Temporal_Tables.csproj", "{403B3F3D-2747-46F1-AB33-B7A55E5665C7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -273,6 +275,10 @@ Global
 		{B3FA884F-A86E-43ED-9CBF-7D1851B02A53}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B3FA884F-A86E-43ED-9CBF-7D1851B02A53}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B3FA884F-A86E-43ED-9CBF-7D1851B02A53}.Release|Any CPU.Build.0 = Release|Any CPU
+		{403B3F3D-2747-46F1-AB33-B7A55E5665C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{403B3F3D-2747-46F1-AB33-B7A55E5665C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{403B3F3D-2747-46F1-AB33-B7A55E5665C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{403B3F3D-2747-46F1-AB33-B7A55E5665C7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
