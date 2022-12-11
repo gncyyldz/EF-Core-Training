@@ -79,7 +79,7 @@ ApplicationDbContext context = new();
 
 #endregion
 #region Execution Strategy Hangi Durumlarda Kullanılır?
-
+//Veritabanının şifresi belirli periyotlarda otomatik olarak değişen uygulamalarda güncel şifreyle connection string'i sağlayacak bir operasyonu custom execution strategy belirleyerek gerçekleştitrebilirsiniz.
 #endregion
 #endregion
 
