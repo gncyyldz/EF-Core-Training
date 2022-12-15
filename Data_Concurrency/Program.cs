@@ -61,9 +61,9 @@ ApplicationDbContext context = new();
 #endregion
 #region RowVersion Column
 //Bu yaklaşımda ise veritabanındaki her bir satıra karşılık versiyon bilgisi fiziksel olarka oluşturulmaktadır.
-var person = await context.Persons.FindAsync(3);
-context.Entry(person).State = EntityState.Modified;
-await context.SaveChangesAsync();
+//var person = await context.Persons.FindAsync(3);
+//context.Entry(person).State = EntityState.Modified;
+//await context.SaveChangesAsync();
 #endregion
 #endregion
 
@@ -82,7 +82,8 @@ class ApplicationDbContext : DbContext
     {
         modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
 
-        modelBuilder.Entity<Person>().Property(p => p.Name).IsConcurrencyToken();
+        //modelBuilder.Entity<Person>().Property(p => p.Name).IsConcurrencyToken();
+        modelBuilder.Entity<Person>().Property(p => p.RowVersion).IsRowVersion();
     }
     readonly ILoggerFactory _loggerFactory = LoggerFactory.Create(builder => builder.AddConsole());
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
