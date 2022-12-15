@@ -91,7 +91,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Global_Query_Filters", "Glo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Owned_Entities_and_Table_Splitting", "Owned_Entities_and_Table_Splitting\Owned_Entities_and_Table_Splitting.csproj", "{B3FA884F-A86E-43ED-9CBF-7D1851B02A53}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Temporal_Tables", "Temporal_Tables\Temporal_Tables.csproj", "{403B3F3D-2747-46F1-AB33-B7A55E5665C7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Temporal_Tables", "Temporal_Tables\Temporal_Tables.csproj", "{403B3F3D-2747-46F1-AB33-B7A55E5665C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data_Concurrency", "Data_Concurrency\Data_Concurrency.csproj", "{DBA7E8D4-BD9A-4F58-AD8B-516EDA0FD303}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -279,6 +281,10 @@ Global
 		{403B3F3D-2747-46F1-AB33-B7A55E5665C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{403B3F3D-2747-46F1-AB33-B7A55E5665C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{403B3F3D-2747-46F1-AB33-B7A55E5665C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBA7E8D4-BD9A-4F58-AD8B-516EDA0FD303}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBA7E8D4-BD9A-4F58-AD8B-516EDA0FD303}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBA7E8D4-BD9A-4F58-AD8B-516EDA0FD303}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBA7E8D4-BD9A-4F58-AD8B-516EDA0FD303}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
