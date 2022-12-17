@@ -63,16 +63,16 @@ ApplicationDbContext context = new();
 #region İlkel Koleksiyonların Serilizasyonu
 //İçerisinde ilkel türlerden olyuşturulmuş koleksiyonları barındıran modelleri migrate etmeye çalıştığımızda hata ile karşılaşmaktayız. By hatadan kurtuılmak ve ilgili veriye koleksiyondaki verileri serilize ederek işleyebilmek için bu koleksiyonu normal metinsel değerlere dönüştürmemize fırsat veren bir conversion operasyonu gerçekleştireibliriz. 
 
-var person = new Person() { Name = "Filanca", Gender = "M", Gender2 = Gender.Male, Married = true, Titles = new() { "A", "B", "C" } };
-await context.Persons.AddAsync(person);
+//var person = new Person() { Name = "Filanca", Gender = "M", Gender2 = Gender.Male, Married = true, Titles = new() { "A", "B", "C" } };
+//await context.Persons.AddAsync(person);
 
-await context.SaveChangesAsync();
+//await context.SaveChangesAsync();
 
-var _person = context.Persons.FindAsync(person.Id);
-Console.WriteLine();
+//var _person = await context.Persons.FindAsync(person.Id);
+//Console.WriteLine();
 #endregion
 #region .NET 6 - Value Converter For Nullable Fields
-
+//.NET 6'dan önce value converter'lar null değerlerin dönüşüşmünü desteklememekteydi. .NET 6 ile artık nul ldeğerler de dönüştürülebilmektedir.
 #endregion
 
 
