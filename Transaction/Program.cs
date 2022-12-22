@@ -5,7 +5,7 @@ using System.Reflection;
 using System.Reflection.Metadata;
 using System.Transactions;
 
-ApplicationDbContext context = new(options);
+ApplicationDbContext context = new();
 #region Transaction Nedir?
 //Transaction, veritaanındaki kümülatif işlemleri atomik bir şekilde gerçekleştirmemizi sağlayan bir özelliktir.
 //Bir transaction içerisindkei tüm işlemler commit edildiği taktirde veritabanına fiziksel olarak yansıtılacaktır. Ya da rollback edilirse tüm işlemler geri alınacak ve fiziksel olarak veritabanında herhangi bir verisel değişiklik durumu söz konusu olmayacaktır.
@@ -99,5 +99,10 @@ class ApplicationDbContext : DbContext
             .HasMany(p => p.Orders)
             .WithOne(o => o.Person)
             .HasForeignKey(o => o.PersonId);
+    }
+
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    {
+        optionsBuilder.UseSqlServer("Server=localhost, 1433;Database=ApplicationDB;User ID=SA;Password=1q2w3e4r+!;TrustServerCertificate=True");
     }
 }
