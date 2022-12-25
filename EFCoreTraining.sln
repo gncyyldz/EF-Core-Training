@@ -99,7 +99,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Value_Conversions", "Value_
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Transaction", "Transaction\Transaction.csproj", "{D0E0E34C-A510-4F40-B242-EF06FB0A6C97}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EF_Core_In_Memory_Database", "EF_Core_In_Memory_Database\EF_Core_In_Memory_Database.csproj", "{DA3BDA42-CF8F-47D2-82CE-1595FCEE80C6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EF_Core_In_Memory_Database", "EF_Core_In_Memory_Database\EF_Core_In_Memory_Database.csproj", "{DA3BDA42-CF8F-47D2-82CE-1595FCEE80C6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EF_Core_Efficient_Querying", "EF_Core_Efficient_Querying\EF_Core_Efficient_Querying.csproj", "{A1A1FEF6-70F3-4E20-B319-45F508B26828}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -303,6 +305,10 @@ Global
 		{DA3BDA42-CF8F-47D2-82CE-1595FCEE80C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DA3BDA42-CF8F-47D2-82CE-1595FCEE80C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DA3BDA42-CF8F-47D2-82CE-1595FCEE80C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1A1FEF6-70F3-4E20-B319-45F508B26828}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1A1FEF6-70F3-4E20-B319-45F508B26828}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1A1FEF6-70F3-4E20-B319-45F508B26828}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1A1FEF6-70F3-4E20-B319-45F508B26828}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
