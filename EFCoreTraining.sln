@@ -105,7 +105,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EF_Core_Efficient_Querying"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EF_Core_7_Bulk_Update_And_Delete", "EF_Core_7_Bulk_Update_And_Delete\EF_Core_7_Bulk_Update_And_Delete.csproj", "{EA6E9024-3EEC-459A-989F-5706D657E50C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EF_Core_7_Injecting_Services_Into_Entities", "EF_Core_7_Injecting_Services_Into_Entities\EF_Core_7_Injecting_Services_Into_Entities.csproj", "{A42334CF-8F0A-4C88-9473-79122BE27699}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EF_Core_7_Injecting_Services_Into_Entities", "EF_Core_7_Injecting_Services_Into_Entities\EF_Core_7_Injecting_Services_Into_Entities.csproj", "{A42334CF-8F0A-4C88-9473-79122BE27699}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EF_Core_7_Entity_Splitting", "EF_Core_7_Entity_Splitting\EF_Core_7_Entity_Splitting.csproj", "{B9D5C106-D50B-440B-A332-8752F1A52452}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -321,6 +323,10 @@ Global
 		{A42334CF-8F0A-4C88-9473-79122BE27699}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A42334CF-8F0A-4C88-9473-79122BE27699}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A42334CF-8F0A-4C88-9473-79122BE27699}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9D5C106-D50B-440B-A332-8752F1A52452}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9D5C106-D50B-440B-A332-8752F1A52452}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9D5C106-D50B-440B-A332-8752F1A52452}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9D5C106-D50B-440B-A332-8752F1A52452}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
